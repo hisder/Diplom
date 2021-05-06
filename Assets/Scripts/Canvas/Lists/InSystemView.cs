@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InSystemView : MonoBehaviour
+public class InSystemView : MonoBehaviour, IElementsList
 {
     [Space]
     [SerializeField] private Transform _parent;
@@ -23,14 +23,6 @@ public class InSystemView : MonoBehaviour
         foreach (var element in _allElements)
         {
             element.OnSelect += ChangeSelection;
-        }
-    }
-
-    public void RemoveSelected()
-    {
-        if (SelectedElement != null)
-        {
-            SelectedElement.Delete();
         }
     }
 
@@ -78,6 +70,7 @@ public class InSystemView : MonoBehaviour
 
         SelectedElement = element;
     }
+
     private void SetSelected(ISystemElement newSelect)
     {
         if (SelectedElement != null)
@@ -137,5 +130,36 @@ public class InSystemView : MonoBehaviour
         }
 
         _allElements.RemoveAll(x => x.DustCollector.GetComponent<DustCollectorVisualization>().HasConnection() == false);
+    }
+
+    // IElementList
+
+    public string GetHeaderInfo()
+    {
+        return "Clean efficincy";
+    }
+    public string GetEfficiencyInfo()
+    {
+        var efficiencyValue = EfficiencyCalculator.CalculateEfficiency(_systemView.BaseFlow, _systemView.System.GetCleanedFlow(_systemView.BaseFlow));
+
+        return (efficiencyValue * 100).ToString();
+    }
+
+    public void RemoveSelected()
+    {
+        if (SelectedElement != null)
+        {
+            SelectedElement.Delete();
+        }
+    }
+
+    public void Activate()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

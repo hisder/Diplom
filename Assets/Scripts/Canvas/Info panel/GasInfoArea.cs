@@ -13,7 +13,7 @@ public class GasInfoArea : MonoBehaviour
     [SerializeField] private List<TMP_InputField> _inputAreas;
     [SerializeField] private List<TextMeshProUGUI> _actualValueText;
 
-    private float[] _savedInfo;
+    private float[] _savedInfo;     
 
 
     void Start()

@@ -19,6 +19,12 @@ public class DustCollector
     [SerializeField] private DustCollector _exitCollector;
     public DustCollector ExitCollector { get => _exitCollector; set => _exitCollector = value; }
 
+    public int Throughput { get; private set; }
+
+    public void SetThroughput(int value)
+    {
+        Throughput = value;
+    }
 
     public DustCollector(string name, float[] efficiency)
     {

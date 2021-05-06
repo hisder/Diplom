@@ -22,7 +22,10 @@ public class AspirationSystemView : MonoBehaviour
 
     [Space]
     [SerializeField] private GasInfoArea _gasInfo;
+
+
     [SerializeField] private GasFlow _baseFlow;
+    public GasFlow BaseFlow { get => _baseFlow; }
 
 
     private ConnectionVisualizationCreater _connectionCreater;

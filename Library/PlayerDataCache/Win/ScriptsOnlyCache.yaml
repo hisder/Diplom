@@ -11,10 +11,14 @@ ScriptsOnlyBuild:
     - DustCollectorCreater
     - DustCollectorVisualization
     - DustCollectorVisualizationCreater
+    - DustRoomView
+    - DustSourceVisualization
     - EfficiencyArea
     - GasInfoArea
     - InSystemView
     - PanelOpener
+    - SuctionConnectionVisualization
+    - SuctionPointVisualization
     - UI
     - WarningsInfo
     Unity.Rider.Editor.dll:
@@ -98,61 +102,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1848}
     - Class: 114
-      Script: {instanceID: 2004}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 2054}
     - Class: 114
-      Script: {instanceID: 2234}
+      Script: {instanceID: 2236}
     - Class: 114
-      Script: {instanceID: 2296}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2398}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2406}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2602}
+      Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2610}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2694}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2696}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2718}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2876}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 2938}
     - Class: 114
-      Script: {instanceID: 3234}
+      Script: {instanceID: 3090}
     - Class: 114
-      Script: {instanceID: 3238}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3244}
     - Class: 114
-      Script: {instanceID: 3436}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3494}
+      Script: {instanceID: 3340}
     - Class: 114
-      Script: {instanceID: 3538}
+      Script: {instanceID: 3432}
     - Class: 114
-      Script: {instanceID: 3560}
+      Script: {instanceID: 3448}
     - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3506}
     - Class: 114
-      Script: {instanceID: 3602}
+      Script: {instanceID: 3550}
+    - Class: 114
+      Script: {instanceID: 3572}
+    - Class: 114
+      Script: {instanceID: 3612}
+    - Class: 114
+      Script: {instanceID: 3614}
+    - Class: 114
+      Script: {instanceID: 3636}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -414,6 +426,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 8ebfd9cefdb0c20d306dd7bc26e84d4c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DustRoomView
+  - hash:
+      serializedVersion: 2
       Hash: 4ff81b0f68696b818090ed5464994fb6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -424,6 +442,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SuctionConnectionVisualization
   - hash:
       serializedVersion: 2
       Hash: 5f170942ee57c7a568f5bcfc7521adea
@@ -612,6 +636,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 3328801cbf8fb2f5ca60d4726a339957
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SuctionPointVisualization
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -696,10 +726,22 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 9079a3cc97e4a91a87f56f2225d4140c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DustSourceVisualization
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 867d23462b749f742deb37ae59263117
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomDisplay
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

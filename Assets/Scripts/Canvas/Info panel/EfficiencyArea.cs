@@ -5,35 +5,33 @@ using TMPro;
 
 public class EfficiencyArea : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _headerTextArea;
     [SerializeField] private TextMeshProUGUI _efficiencyTextArea;
+
+    [Space]
+    [SerializeField] private UI _UI;
+
     [SerializeField] private AspirationSystemView _systemView;
 
-    private WarningsCalculator _warningsCalculator;
-
+    private float _cleanEfficiency;
+    private float _suckEfficiency;
 
     private void Awake()
     {
-        _warningsCalculator = new WarningsCalculator();
-
         _systemView.OnSystemClear += DisplatEfficiency;
-        _systemView.OnSystemClear += DisplayWarningsCount;
 
         _systemView.OnSystemDoesntComplete += () => { _efficiencyTextArea.text = "NAN"; };
+
     }
 
+    public void RefreshDisplayerInfo(string headerText, string efficiencyText)
+    {
+        _headerTextArea.text = headerText;
+        _efficiencyTextArea.text = efficiencyText;
+    }
 
     private void DisplatEfficiency(float efficiency)
     {
         _efficiencyTextArea.text = $"{efficiency.ToString()}%";
-    }
-
-    private void DisplayWarningsCount(float efficiency)
-    {
-        _warningsCalculator.СalculateWarningsNumber(_systemView.System);
-    }
-
-    public void DisplayWarningInfo()
-    {
-
     }
 }

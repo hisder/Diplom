@@ -8,12 +8,6 @@ public class Display : MonoBehaviour
 
     [SerializeField] private RectTransform _displayRect;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (RectTransformUtility.RectangleContainsScreenPoint(_displayRect, Input.mousePosition))

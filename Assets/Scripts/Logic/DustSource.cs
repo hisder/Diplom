@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DustSource : MonoBehaviour
+[System.Serializable]
+public class DustSource
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int _particlesPerSecond;
+    public int ParticlesPerSecondMax { get => _particlesPerSecond; private set => _particlesPerSecond = value; }
+    public float ParticlesPerSecondCurrent { get; set; }
+    [SerializeField] private Vector2 _position;
+    public Vector2 Position { get => _position; private set => _position = value; }
+
+    private float[] _createdParticalsProportion;
+
+    public DustSource(int particlesPerSecond, float[] particalsProportion, Vector2 position)
     {
-        
+        ParticlesPerSecondMax = particlesPerSecond;
+        _createdParticalsProportion = particalsProportion;
+        Position = position;
+
+        ParticlesPerSecondCurrent = ParticlesPerSecondMax;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Reset()
     {
-        
+        ParticlesPerSecondCurrent = ParticlesPerSecondMax;
+    }
+
+    public void SetPosition(Vector2 position)
+    {
+        Position = position;
+    }
+
+    public void ReleaseParticles(DustRoom dustRoom)
+    {
+
     }
 }

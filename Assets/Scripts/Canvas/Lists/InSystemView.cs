@@ -136,13 +136,13 @@ public class InSystemView : MonoBehaviour, IElementsList
 
     public string GetHeaderInfo()
     {
-        return "Clean efficincy";
+        return "Clean efficiency";
     }
     public string GetEfficiencyInfo()
     {
         var efficiencyValue = EfficiencyCalculator.CalculateEfficiency(_systemView.BaseFlow, _systemView.System.GetCleanedFlow(_systemView.BaseFlow));
 
-        return (efficiencyValue * 100).ToString();
+        return $"{(efficiencyValue).ToString()}%";
     }
 
     public void RemoveSelected()

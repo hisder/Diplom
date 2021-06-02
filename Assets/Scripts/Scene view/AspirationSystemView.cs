@@ -118,6 +118,7 @@ public class AspirationSystemView : MonoBehaviour
     private void UpdateFlowData(float[] newData)
     {
         _baseFlow = new GasFlow(newData);
+        Debug.Log(_baseFlow.ToString());
     }
 
     private void ConnectionCreated(ConnectionVisualization newConnection)

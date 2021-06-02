@@ -115,11 +115,11 @@ public class InRoomView : MonoBehaviour, IElementsList
 
     public string GetHeaderInfo()
     {
-        return "Suction efficincy";
+        return "Suction efficiency";
     }
     public string GetEfficiencyInfo()
     {
-        return (_roomView.SuctionEfficiency * 100).ToString();
+        return $"{(_roomView.SuctionEfficiency).ToString()}%";
     }
 
     public void RemoveSelected()
